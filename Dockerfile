@@ -24,3 +24,6 @@ RUN DEBIAN_FRONTEND=noninteractive apt install -y tmux
 
 # for vnc X11 
 RUN DEBIAN_FRONTEND=noninteractive apt install -y xvfb x11vnc
+
+# automatically source ros shell
+RUN echo "source '/opt/ros/noetic/setup.bash' --" >> /root/.bashrc

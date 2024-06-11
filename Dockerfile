@@ -25,5 +25,11 @@ RUN DEBIAN_FRONTEND=noninteractive apt install -y tmux
 # for vnc X11 
 RUN DEBIAN_FRONTEND=noninteractive apt install -y xvfb x11vnc
 
+# for JSON and YAML processing
+RUN DEBIAN_FRONTEND=noninteractive apt install -y jq yq
+
+# python system-repo managed packages
+RUN DEBIAN_FRONTEND=noninteractive apt install -y python3-dotenv
+
 # automatically source ros shell
 RUN echo "source '/opt/ros/noetic/setup.bash' --" >> /root/.bashrc
